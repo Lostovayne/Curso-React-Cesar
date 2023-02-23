@@ -7,4 +7,5 @@ export { default as HooksEventoClick } from './HooksEventoClick';
 export { default as HookuseLoaderData } from './HookuseLoaderData';
 export { default as HookuseLocation } from './HookuseLocation';
 export { default as HookuseNavigate } from './HookuseNavigate';
+export { default as HookuseRef } from './HookuseRef';
 export { default as useHookPersonalizado } from './useHookPersonalizado';

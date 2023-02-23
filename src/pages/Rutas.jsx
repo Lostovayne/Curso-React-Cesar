@@ -17,11 +17,16 @@ const Rutas = () => {
           <NavLink to={`/rutas/path/${id}`}>Parametros path</NavLink>
         </li>
         <li>
-          <NavLink to={`/rutas/query-string?id=${id}`}>Parametros query String</NavLink>
+          <NavLink to={`/rutas/query-string?id=${id}`}>
+            Parametros query String
+          </NavLink>
         </li>
         <li>
-          
-          <NavLink to="/hooks "  > Ruta Hooks </NavLink>
+          <NavLink to='/hooks '> Ruta Hooks </NavLink>
+        </li>
+
+        <li>
+          <NavLink to='/formularios'>Formularios</NavLink>
         </li>
       </ul>
     </nav>

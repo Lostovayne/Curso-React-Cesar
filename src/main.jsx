@@ -11,7 +11,10 @@ import {
   Rutas,
   RutasPath,
   RutasQueryString,
-  ErrorPersonalizado
+  ErrorPersonalizado,
+  Formularios,
+  FormularioSimple,
+  FormularioUseActionData
 } from './pages';
 import {
   Hooks,
@@ -22,9 +25,12 @@ import {
   HookCustom,
   HookuseLoaderData,
   HookuseNavigate,
-  HookuseLocation
+  HookuseLocation,
+  HookuseRef
 } from './hooks';
 import { loader as LoadingCountrys } from './hooks/HookuseLoaderData';
+ import { action as procesarFormularioActionData   } from "./pages/FormularioUseActionData"
+
 
 const router = createBrowserRouter([
   {
@@ -56,6 +62,22 @@ const router = createBrowserRouter([
         path: '/rutas/query-string',
         element: <RutasQueryString />
       },
+
+      {
+        path: '/formularios',
+        element: <Formularios />
+      },
+
+      {
+        path: '/formularios/simple',
+        element: <FormularioSimple />
+      },
+      {
+        path: '/formularios/use-action-data',
+        element: <FormularioUseActionData />,
+        action: procesarFormularioActionData
+      },
+
       {
         path: '/hooks',
         element: <Hooks />
@@ -93,6 +115,10 @@ const router = createBrowserRouter([
       {
         path: '/hooks/hook-useLocation',
         element: <HookuseLocation />
+      },
+      {
+        path: '/hooks/hook-useRef',
+        element: <HookuseRef />
       }
     ]
   }

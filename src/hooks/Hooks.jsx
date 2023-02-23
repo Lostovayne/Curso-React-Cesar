@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Hooks = () => {
   return (
@@ -29,8 +29,11 @@ const Hooks = () => {
         <li>
           <Link to='/hooks/hook-useLocation'>useLocation</Link>
         </li>
+        <li>
+          <Link to='/hooks/hook-useRef'>Hook useRef </Link>
+        </li>
       </ul>
     </>
   );
-}
-export default Hooks
+};
+export default Hooks;
