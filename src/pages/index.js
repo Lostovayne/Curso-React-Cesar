@@ -8,3 +8,5 @@ export { default as Rutas } from './Rutas';
 export { default as RutasPath } from './RutasPath';
 export { default as RutasQueryString } from './RutasQueryString';
 export { default as SobreNosotros } from './SobreNosotros';
+export { default as UtilesDay } from './UtilesDay';
+export * from './index';

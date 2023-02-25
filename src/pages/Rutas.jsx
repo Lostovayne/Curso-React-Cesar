@@ -28,6 +28,9 @@ const Rutas = () => {
         <li>
           <NavLink to='/formularios'>Formularios</NavLink>
         </li>
+        <li>
+          <NavLink to="/utiles" >Utiles</NavLink>
+        </li>
       </ul>
     </nav>
   );

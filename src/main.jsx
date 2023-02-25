@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import { Layout } from './layout';
+
 import {
   Home,
   SobreNosotros,
@@ -14,7 +15,8 @@ import {
   ErrorPersonalizado,
   Formularios,
   FormularioSimple,
-  FormularioUseActionData
+  FormularioUseActionData,
+  UtilesDay
 } from './pages';
 import {
   Hooks,
@@ -28,6 +30,10 @@ import {
   HookuseLocation,
   HookuseRef
 } from './hooks';
+import Utiles from './helpers/Utiles';
+
+
+
 import { loader as LoadingCountrys } from './hooks/HookuseLoaderData';
  import { action as procesarFormularioActionData   } from "./pages/FormularioUseActionData"
 
@@ -42,6 +48,15 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />
       },
+      {
+        path: '/utiles',
+        element: <Utiles />
+      },
+      {
+        path: '/utiles/UtilesDay',
+        element : <UtilesDay />
+      },
+
       {
         path: '/sobre-nosotros',
         element: <SobreNosotros />
