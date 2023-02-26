@@ -31,6 +31,9 @@ const Rutas = () => {
         <li>
           <NavLink to="/utiles" >Utiles</NavLink>
         </li>
+        <li>
+          <NavLink to="/context" >Context</NavLink>
+        </li>
       </ul>
     </nav>
   );

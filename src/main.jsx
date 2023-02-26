@@ -16,7 +16,8 @@ import {
   Formularios,
   FormularioSimple,
   FormularioUseActionData,
-  UtilesDay
+  UtilesDay,
+  ContextEjemplo
 } from './pages';
 import {
   Hooks,
@@ -30,12 +31,14 @@ import {
   HookuseLocation,
   HookuseRef
 } from './hooks';
-import Utiles from './helpers/Utiles';
+import {Utiles,Utilesswipeable} from './helpers';
+
 
 
 
 import { loader as LoadingCountrys } from './hooks/HookuseLoaderData';
  import { action as procesarFormularioActionData   } from "./pages/FormularioUseActionData"
+import {element} from 'prop-types';
 
 
 const router = createBrowserRouter([
@@ -54,7 +57,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/utiles/UtilesDay',
-        element : <UtilesDay />
+        element: <UtilesDay />
+      },
+      {
+        path: '/utiles/Utilesswipeable',
+        element : <Utilesswipeable />
       },
 
       {
@@ -91,6 +98,13 @@ const router = createBrowserRouter([
         path: '/formularios/use-action-data',
         element: <FormularioUseActionData />,
         action: procesarFormularioActionData
+      },
+      {
+        
+        path:"/context",
+        element:<ContextEjemplo />
+        
+        
       },
 
       {

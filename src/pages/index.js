@@ -1,3 +1,4 @@
+export { default as ContextEjemplo } from './ContextEjemplo';
 export { default as Error404 } from './Error404';
 export { default as ErrorPersonalizado } from './ErrorPersonalizado';
 export { default as FormularioSimple } from './FormularioSimple';
