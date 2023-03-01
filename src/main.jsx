@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+//Provider para Redux
+
+import { Provider } from 'react-redux';
+import { store } from "./store/store"
+
+// continuacion  codigo
+
 import App from './App';
 import './index.css';
 import { Layout } from './layout';
@@ -17,7 +25,8 @@ import {
   FormularioSimple,
   FormularioUseActionData,
   UtilesDay,
-  ContextEjemplo
+  ContextEjemplo,
+  ReduxEjemplo
 } from './pages';
 import {
   Hooks,
@@ -31,14 +40,13 @@ import {
   HookuseLocation,
   HookuseRef
 } from './hooks';
+
 import {Utiles,Utilesswipeable} from './helpers';
-
-
-
 
 import { loader as LoadingCountrys } from './hooks/HookuseLoaderData';
  import { action as procesarFormularioActionData   } from "./pages/FormularioUseActionData"
-import {element} from 'prop-types';
+// import {element} from 'prop-types';
+
 
 
 const router = createBrowserRouter([
@@ -106,6 +114,15 @@ const router = createBrowserRouter([
         
         
       },
+      
+      
+      {
+         path :"redux",
+         element :<ReduxEjemplo />
+        
+        
+      },
+      
 
       {
         path: '/hooks',
@@ -155,8 +172,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <App />
-    </RouterProvider>
+    {/* React redux */}
+    <Provider store={store} >
+      <RouterProvider router={router}>
+        <App />
+      </RouterProvider>
+    </Provider>
   </React.StrictMode>
 );

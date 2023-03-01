@@ -5,6 +5,7 @@ export { default as FormularioSimple } from './FormularioSimple';
 export { default as FormularioUseActionData } from './FormularioUseActionData';
 export { default as Formularios } from './Formularios';
 export { default as Home } from './Home';
+export { default as ReduxEjemplo } from './ReduxEjemplo';
 export { default as Rutas } from './Rutas';
 export { default as RutasPath } from './RutasPath';
 export { default as RutasQueryString } from './RutasQueryString';
